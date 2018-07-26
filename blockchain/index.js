@@ -25,6 +25,7 @@ class Blockchain {
                 return false;        
             }
         }
+        return true;
     }
 
     replaceChain(newChain) {

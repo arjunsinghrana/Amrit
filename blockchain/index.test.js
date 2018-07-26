@@ -1,4 +1,5 @@
-const Blockchain = require('./blockchain');
+const Blockchain = require('./index');
+const Block = require('./block');
 
 describe('Blockchain', () => {
     let blockchain, blockchain2;
@@ -14,9 +15,9 @@ describe('Blockchain', () => {
 
     it('adds a new block', () => {
         const data = 'foo';
-        bc.addBlock(data);
+        blockchain.addBlock(data);
 
-        expect(bc.chain[bc.chain.length-1].data).toEqual(data);
+        expect(blockchain.chain[blockchain.chain.length-1].data).toEqual(data);
     });
 
     it('validates a valid chain', () => {
