@@ -37,7 +37,7 @@ class Block {
         return new this(timestamp, lastHash, hash, data, nonce);
     }
 
-    static hash(timestamp, lastHash, data) {
+    static hash(timestamp, lastHash, data, nonce) {
         return SHA256(`${timestamp}${lastHash}${data}${nonce}`).toString();
     }
 
