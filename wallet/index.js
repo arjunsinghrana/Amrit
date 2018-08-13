@@ -17,6 +17,14 @@ class Wallet {
     sign(dataHash) {
         return this.keyPair.sign(dataHash);
     }
+
+    static verifyTransaction(transaction) {
+        return ChainUtil.verifySignature(
+            transaction.input.address,
+            transaction.input.signature,
+            ChainUtil.hash(transaction.outputs)
+        );
+    }
 }
 
 module.exports = Wallet;
