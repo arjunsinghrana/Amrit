@@ -1,4 +1,5 @@
-const Block = require('./block')
+const Wallet = require('./wallet');
 
-const block = new Block('foo', 'bar', 'zoo', 'baz')
-console.log(block.toString())
+const wallet = new Wallet();
+
+console.log(wallet.toString());
